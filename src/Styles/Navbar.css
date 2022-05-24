@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(213, 210, 211, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.item {
+  margin: 20px 20px 0px 20px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.left-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.component {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.text {
+  color: white;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: white;
+  text-decoration: none;
+}

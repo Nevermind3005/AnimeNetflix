@@ -1,0 +1,14 @@
+.title {
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0px 40px 40px 40px;
+
+}
+
+.description {
+    color: white;
+    font-size: 20px;
+    margin: 0 20px 0px 20px;
+    line-height: normal;
+}
