@@ -1,5 +1,5 @@
-const baseURL : string = 'https://kitsu.io/api/edge/';
+const baseURL: string = 'https://kitsu.io/api/edge/';
 
-const endpoints = {'trending' : 'trending/anime?limit=20'}
+const endpoints = { trending: 'trending/anime?limit=20' };
 
-export default {baseURL, endpoints};
+export { baseURL, endpoints };

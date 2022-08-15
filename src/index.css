@@ -53,4 +53,6 @@ CSS RESET END
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  background-color: rgb(18, 18, 18);
+  color: white;
 }

@@ -1,0 +1,28 @@
+.row_movies {
+    display: flex; 
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_movies::-webkit-scrollbar {
+    display: none;
+}
+
+.row_movie {
+    object-fit: contain;
+    width: 100%;
+    max-height: 200px;
+    transition: transform 450ms;
+    margin-right: 10px;
+}
+
+.row_movie:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.movie_title {
+    font-size: 25px;
+    margin: 30px 0px 0px 40px;
+}
