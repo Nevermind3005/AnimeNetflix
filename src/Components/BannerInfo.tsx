@@ -9,12 +9,8 @@ interface Props {
 const BannerInfo: React.FC<Props> = ({ title, description }) => {
     return (
         <div>
-            <div className='title'>{title}</div>
-            <div className='description'>
-                {description.length > 250
-                    ? description.substring(0, 250) + '...'
-                    : description}
-            </div>
+            <div className='title textOverflow'>{title}</div>
+            <div className='description textOverflow'>{description}</div>
         </div>
     );
 };

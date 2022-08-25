@@ -8,6 +8,7 @@ interface Props {
 }
 
 interface MovieObj {
+    id: string;
     attributes: {
         coverImage: {
             small: string;
@@ -56,8 +57,7 @@ const Row: React.FC<Props> = ({ title, endpoint }) => {
                 });
         };
         fetchData();
-        console.log(movies);
-    }, [endpoint, movies]);
+    }, [endpoint]);
 
     return (
         <div>
@@ -73,7 +73,7 @@ const Row: React.FC<Props> = ({ title, endpoint }) => {
                                 ? movie.attributes.titles.en_jp
                                 : movie.attributes.titles.en
                         }
-                        key={movie.attributes.youtubeVideoId}
+                        key={movie.id}
                     />
                 ))}
             </div>
