@@ -26,3 +26,26 @@
   height: 100%;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0), 60%, rgba(0, 0, 0, 0.7));
 }
+
+.title {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0px 40px 40px 40px;
+
+}
+
+.description {
+  color: white;
+  font-size: 20px;
+  margin: 0 60px 0px 60px;
+  line-height: normal;
+}
+
+.textOverflow {
+  display: -webkit-box;
+  max-width: 70%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

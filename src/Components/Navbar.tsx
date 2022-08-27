@@ -2,8 +2,10 @@ import React from 'react';
 import '../Styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useState } from 'react';
 
 const Navbar: React.FC = () => {
+    const [searchQuerry, setSearchQuerry] = React.useState('');
     return (
         <nav className='container component text'>
             <div className='left-container push-up'>
@@ -16,8 +18,15 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
             <div className='container'>
-                <div className='circle item'>
-                    <i className='bi bi-search icon'></i>
+                <div className='item'>
+                    <form action=''>
+                        <input
+                            type='search'
+                            required
+                            onChange={(e) => setSearchQuerry(e.target.value)}
+                        />
+                        <i className='bi bi-search icon'></i>
+                    </form>
                 </div>
                 <div className='circle item'>
                     <i className='bi bi-person-fill icon'></i>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { baseURL, endpoints } from '../api';
 import '../Styles/Banner.css';
-import BannerInfo from './BannerInfo';
 
 interface MovieObj {
     attributes: {
@@ -70,15 +69,17 @@ const Banner: React.FC = () => {
                 ></header>
             )}
             <div className='container center-vert'>
-                <BannerInfo
-                    title={
-                        movie.attributes.titles.en === '' ||
+                <div>
+                    <div className='title textOverflow'>
+                        {movie.attributes.titles.en === '' ||
                         movie.attributes.titles.en == null
                             ? movie.attributes.titles.en_jp
-                            : movie.attributes.titles.en
-                    }
-                    description={movie.attributes.description}
-                />
+                            : movie.attributes.titles.en}
+                    </div>
+                    <div className='description textOverflow'>
+                        {movie.attributes.description}
+                    </div>
+                </div>
             </div>
         </div>
     );
