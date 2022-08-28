@@ -2,23 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { baseURL, endpoints } from '../api';
 import '../Styles/Banner.css';
 
-interface MovieObj {
-    attributes: {
-        coverImage: {
-            small: string;
-            original: string;
-            large: string;
-        };
-        titles: {
-            en: string;
-            en_jp: string;
-        };
-        description: string;
-    };
-}
-
 const Banner: React.FC = () => {
-    const [movie, setMovie] = useState<MovieObj>({
+    const [movie, setMovie] = useState<any>({
         attributes: {
             coverImage: {
                 small: '',

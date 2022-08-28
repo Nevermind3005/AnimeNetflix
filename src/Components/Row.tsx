@@ -7,31 +7,8 @@ interface Props {
     endpoint: string;
 }
 
-interface MovieObj {
-    id: string;
-    attributes: {
-        coverImage: {
-            small: string;
-            original: string;
-            large: string;
-        };
-        posterImage: {
-            small: string;
-            medium: string;
-            large: string;
-            original: string;
-        };
-        titles: {
-            en: string;
-            en_jp: string;
-        };
-        description: string;
-        youtubeVideoId: string;
-    };
-}
-
 const Row: React.FC<Props> = ({ title, endpoint }) => {
-    const [movies, setMovies] = useState<MovieObj[]>();
+    const [movies, setMovies] = useState<any[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {

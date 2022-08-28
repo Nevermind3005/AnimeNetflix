@@ -5,7 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useState } from 'react';
 
 const Navbar: React.FC = () => {
-    const [searchQuerry, setSearchQuerry] = React.useState('');
+    const [searchQuerry, setSearchQuerry] = React.useState<string>('');
     return (
         <nav className='container component text'>
             <div className='left-container push-up'>
@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
                 <div className='item'>
                     <form action=''>
                         <input
+                            placeholder='Search query'
                             type='search'
                             required
                             onChange={(e) => setSearchQuerry(e.target.value)}
