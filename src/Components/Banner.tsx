@@ -3,7 +3,7 @@ import { baseURL, endpoints } from '../api';
 import '../Styles/Banner.css';
 
 const Banner: React.FC = () => {
-    const [movie, setMovie] = useState<any>({
+    const [anime, setAnima] = useState<any>({
         attributes: {
             coverImage: {
                 small: '',
@@ -35,7 +35,7 @@ const Banner: React.FC = () => {
                 return res.json();
             })
             .then((res) =>
-                setMovie(res.data[Math.floor(Math.random() * res.data.length)])
+                setAnima(res.data[Math.floor(Math.random() * res.data.length)])
             );
     };
 
@@ -45,24 +45,24 @@ const Banner: React.FC = () => {
 
     return (
         <div style={{ position: 'relative', marginTop: '-60px' }}>
-            {movie.attributes.coverImage.large !== '' && (
+            {anime.attributes.coverImage.large !== '' && (
                 <header
                     className='banner'
                     style={{
-                        backgroundImage: `url(${movie.attributes.coverImage.large})`,
+                        backgroundImage: `url(${anime.attributes.coverImage.large})`,
                     }}
                 ></header>
             )}
             <div className='container center-vert'>
                 <div>
                     <div className='title textOverflow'>
-                        {movie.attributes.titles.en === '' ||
-                        movie.attributes.titles.en == null
-                            ? movie.attributes.titles.en_jp
-                            : movie.attributes.titles.en}
+                        {anime.attributes.titles.en === '' ||
+                        anime.attributes.titles.en == null
+                            ? anime.attributes.titles.en_jp
+                            : anime.attributes.titles.en}
                     </div>
                     <div className='description textOverflow'>
-                        {movie.attributes.description}
+                        {anime.attributes.description}
                     </div>
                 </div>
             </div>

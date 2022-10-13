@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Row: React.FC<Props> = ({ title, endpoint }) => {
-    const [movies, setMovies] = useState<any[]>([]);
+    const [animes, setAnimes] = useState<any[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -30,7 +30,7 @@ const Row: React.FC<Props> = ({ title, endpoint }) => {
                     return res.json();
                 })
                 .then((res) => {
-                    setMovies(res.data);
+                    setAnimes(res.data);
                 });
         };
         fetchData();
@@ -38,19 +38,19 @@ const Row: React.FC<Props> = ({ title, endpoint }) => {
 
     return (
         <div>
-            <h2 className='movie_title'>{title}</h2>
-            <div className='row_movies'>
-                {movies?.map((movie) => (
+            <h2 className='anime_title'>{title}</h2>
+            <div className='row_animes'>
+                {animes?.map((anime) => (
                     <img
-                        className='row_movie'
-                        src={movie.attributes.posterImage.large}
+                        className='row_anime'
+                        src={anime.attributes.posterImage.large}
                         alt={
-                            movie.attributes.titles.en === '' ||
-                            movie.attributes.titles.en == null
-                                ? movie.attributes.titles.en_jp
-                                : movie.attributes.titles.en
+                            anime.attributes.titles.en === '' ||
+                            anime.attributes.titles.en == null
+                                ? anime.attributes.titles.en_jp
+                                : anime.attributes.titles.en
                         }
-                        key={movie.id}
+                        key={anime.id}
                     />
                 ))}
             </div>

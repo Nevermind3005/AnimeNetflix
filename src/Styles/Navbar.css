@@ -96,6 +96,7 @@ input {
   position: absolute;
   border-radius: 50%;
   transition: all 1s;
+  border: none;
 }
 
 form:hover,
@@ -112,7 +113,8 @@ form:valid input{
 form:hover .bi-search,
 form:valid .bi-search {
   background: white;
-  color: black
+  color: black;
+  cursor: pointer;
 }
 
 form:valid a {
