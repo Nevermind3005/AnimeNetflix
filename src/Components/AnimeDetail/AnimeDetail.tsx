@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { baseURL } from '../api';
+import { baseURL } from '../../api';
 
 const AnimeDetail = () => {
     const { animeId } = useParams();

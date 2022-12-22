@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { baseURL, endpoints } from '../api';
-import '../Styles/Banner.css';
+import { baseURL, endpoints } from '../../api';
+import './Banner.css';
 
 const Banner: React.FC = () => {
     const [anime, setAnima] = useState<any>({

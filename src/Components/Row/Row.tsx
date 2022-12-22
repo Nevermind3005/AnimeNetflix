@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { baseURL } from '../api';
-import '../Styles/Row.css';
+import { baseURL } from '../../api';
+import './Row.css';
 
 interface Props {
     title: string;

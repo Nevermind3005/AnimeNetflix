@@ -1,8 +1,8 @@
 import React from 'react';
 import { endpoints } from './api';
-import Banner from './Components/Banner';
-import Navbar from './Components/Navbar';
-import Row from './Components/Row';
+import Banner from './Components/Banner/Banner';
+import Navbar from './Components/Navbar/Navbar';
+import Row from './Components/Row/Row';
 
 const App: React.FC = () => {
     return (

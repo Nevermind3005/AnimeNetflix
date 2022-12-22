@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
-import AnimeDetail from './Components/AnimeDetail';
+import AnimeDetail from './Components/AnimeDetail/AnimeDetail';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
