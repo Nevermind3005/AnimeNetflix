@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { baseURL, endpoints } from '../../api';
 import './Banner.css';
 
@@ -55,12 +56,14 @@ const Banner: React.FC = () => {
             )}
             <div className='container center-vert'>
                 <div>
-                    <div className='title textOverflow'>
-                        {anime.attributes.titles.en === '' ||
-                        anime.attributes.titles.en == null
-                            ? anime.attributes.titles.en_jp
-                            : anime.attributes.titles.en}
-                    </div>
+                    <Link to={`anime/${anime.id}`}>
+                        <div className='title textOverflow'>
+                            {anime.attributes.titles.en === '' ||
+                            anime.attributes.titles.en == null
+                                ? anime.attributes.titles.en_jp
+                                : anime.attributes.titles.en}
+                        </div>
+                    </Link>
                     <div className='description textOverflow'>
                         {anime.attributes.description}
                     </div>

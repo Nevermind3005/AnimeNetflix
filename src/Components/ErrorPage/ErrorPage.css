@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-#error_elements > h1, p {
+#error_elements > h1, #error_elements > p {
     padding: 15px;
     display: flex;
     justify-content: center;
