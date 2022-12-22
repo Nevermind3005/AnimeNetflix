@@ -1,0 +1,25 @@
+#error_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#error_elements > h1, p {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#error_elements > h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#error_element > p {
+    font-size: 25px;
+}
+
+html, #root, body, #error_page {
+    width: 100%;
+    height: 100%;
+}

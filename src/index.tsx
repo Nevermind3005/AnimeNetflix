@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import ErrorPage from './Components/ErrorPage';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 import AnimeDetail from './Components/AnimeDetail';
 
 const root = ReactDOM.createRoot(
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     {
         path: 'anime/:animeId',
         element: <AnimeDetail />,
+        errorElement: <ErrorPage />,
     },
 ]);
 
