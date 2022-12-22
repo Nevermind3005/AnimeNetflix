@@ -5,13 +5,12 @@
     padding: 20px;
 }
 
-.row_animess::-webkit-scrollbar {
+.row_animes::-webkit-scrollbar {
     display: none;
 }
 
 .row_anime {
     object-fit: contain;
-    width: 100%;
     max-height: 200px;
     transition: transform 450ms;
     margin-right: 10px;

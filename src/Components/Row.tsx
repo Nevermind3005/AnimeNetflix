@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { baseURL } from '../api';
 import '../Styles/Row.css';
 
@@ -41,17 +42,18 @@ const Row: React.FC<Props> = ({ title, endpoint }) => {
             <h2 className='anime_title'>{title}</h2>
             <div className='row_animes'>
                 {animes?.map((anime) => (
-                    <img
-                        className='row_anime'
-                        src={anime.attributes.posterImage.large}
-                        alt={
-                            anime.attributes.titles.en === '' ||
-                            anime.attributes.titles.en == null
-                                ? anime.attributes.titles.en_jp
-                                : anime.attributes.titles.en
-                        }
-                        key={anime.id}
-                    />
+                    <Link to={`anime/${anime.id}`} key={anime.id}>
+                        <img
+                            src={anime.attributes.posterImage.large}
+                            alt={
+                                anime.attributes.titles.en === '' ||
+                                anime.attributes.titles.en == null
+                                    ? anime.attributes.titles.en_jp
+                                    : anime.attributes.titles.en
+                            }
+                            className='row_anime'
+                        />
+                    </Link>
                 ))}
             </div>
         </div>
