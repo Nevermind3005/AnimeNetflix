@@ -39,7 +39,7 @@ const AnimeDetail = () => {
     }
 
     return (
-        <div>
+        <div style={{ position: 'relative', marginTop: '-60px' }}>
             <img
                 className='banner'
                 src={anime.attributes.coverImage.large}

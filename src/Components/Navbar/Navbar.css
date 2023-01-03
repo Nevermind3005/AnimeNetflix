@@ -2,7 +2,7 @@
   --transparent-gray: rgba(213, 210, 211, 0.5);
 }
 
-.container {
+.nb_container {
   display: flex;
   justify-content: space-between;
 }
@@ -61,7 +61,7 @@ form {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  transition: all 1s;
+  transition: all 0.5s;
   width: 40px;
   height: 40px;
   background: var(--transparent-gray);

@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import AnimeDetail from './Components/AnimeDetail/AnimeDetail';
+import AnimeList from './Components/AnimeList/AnimeList';
+import Home from './Components/Home/Home';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -15,11 +17,22 @@ const router = createBrowserRouter([
         path: '/',
         element: <App />,
         errorElement: <ErrorPage />,
-    },
-    {
-        path: 'anime/:animeId',
-        element: <AnimeDetail />,
-        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: '/',
+                element: <Home />,
+            },
+            {
+                path: 'anime/:animeId',
+                element: <AnimeDetail />,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: 'search/:query',
+                element: <AnimeList />,
+                errorElement: <ErrorPage />,
+            },
+        ],
     },
 ]);
 

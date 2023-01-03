@@ -1,21 +1,24 @@
 import React from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavigateFunction, useNavigate } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useState } from 'react';
 
-const handleQuerry = (
+const handleQuery = (
     searchQuerry: String,
-    e: React.FormEvent<HTMLFormElement>
+    e: React.FormEvent<HTMLFormElement>,
+    navigate: NavigateFunction
 ) => {
-    alert(searchQuerry);
     e.preventDefault();
+    navigate(`search/${searchQuerry}`);
 };
 
 const Navbar: React.FC = () => {
-    const [searchQuerry, setSearchQuerry] = useState<string>('');
+    const [searchQuery, setSearchQuery] = useState<string>('');
+    const navigate = useNavigate();
+
     return (
-        <nav className='container component text'>
+        <nav className='nb_container component text'>
             <div className='left-container push-up'>
                 <Link to='/' className='item link'>
                     HOME
@@ -28,18 +31,18 @@ const Navbar: React.FC = () => {
                     <i className='bi bi-caret-down-fill icon arrow'></i>
                 </div>
             </div>
-            <div className='container'>
+            <div className='nb_container'>
                 <div className='item'>
                     <form
                         action='/'
                         method='get'
-                        onSubmit={(e) => handleQuerry(searchQuerry, e)}
+                        onSubmit={(e) => handleQuery(searchQuery, e, navigate)}
                     >
                         <input
                             placeholder='Search query'
                             type='search'
                             required
-                            onChange={(e) => setSearchQuerry(e.target.value)}
+                            onChange={(e) => setSearchQuery(e.target.value)}
                         />
                         <button
                             className='bi bi-search icon'

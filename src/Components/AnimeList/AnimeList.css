@@ -1,0 +1,16 @@
+.anime_cover {
+    max-height: 200px;
+    transition: transform 450ms;
+    margin: 10px;
+}
+
+.anime_cover:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.al_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
