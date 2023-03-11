@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { baseURL } from '../../api';
@@ -39,10 +40,38 @@ const AnimeDetail = () => {
     }
 
     return (
-        <div style={{ position: 'relative', marginTop: '-60px' }}>
+        <div
+            style={{
+                position: 'relative',
+                marginTop: '-60px',
+            }}
+        >
+            {anime.attributes.coverImage == null && (
+                <div
+                    style={{
+                        backgroundImage: `url(${anime.attributes.posterImage.original})`,
+                        backgroundSize: 'contain',
+                        filter: 'blur(8px)',
+                        WebkitFilter: 'blur(8px)',
+                        height: '448px',
+                        width: '100%',
+                        position: 'absolute',
+                    }}
+                ></div>
+            )}
             <img
                 className='banner'
-                src={anime.attributes.coverImage.large}
+                style={{
+                    display: 'block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    position: 'relative',
+                }}
+                src={
+                    anime.attributes.coverImage == null
+                        ? anime.attributes.posterImage.original
+                        : anime.attributes.coverImage.original
+                }
                 alt={
                     anime.attributes.titles.en === '' ||
                     anime.attributes.titles.en == null
